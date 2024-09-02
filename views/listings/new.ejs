@@ -6,41 +6,63 @@
                 <br><br>
                 <h3>Create new Listing</h3>
                 <br>
-                <form action="/listings" method="POST">
+                <form action="/listings" method="POST" class="needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" id="title" name="Listing[title]" class="form-control"
-                            placeholder="enter title">
+                            placeholder="enter title" required>
+                        <div class="valid-feedback">Title looks good!</div>
+                        <div class="invalid-feedback">
+                            Please enter a vaild title
+                        </div>
                     </div class="mb-3">
                     <div>
                         <label for="title" class="form-label">Description</label>
-                        <textarea name="Listing[description]" class="form-control"
-                            placeholder="enter description"></textarea>
+                        <textarea name="Listing[description]" class="form-control" placeholder="enter description"
+                            required></textarea>
+                        <div class="valid-feedback">Description looks good!</div>
+                        <div class="invalid-feedback">
+                            Please enter a description
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="title" class="form-label">Image</label>
                         <input type="text" name="Listing[image][url]" class="form-control"
                             placeholder="enter image URL/link">
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Price</label>
                                 <input type="number" name="Listing[price]" class="form-control"
-                                    placeholder="enter price">
+                                    placeholder="enter price" required>
+                                <div class="valid-feedback">Price looks good!</div>
+                                <div class="invalid-feedback">
+                                    Please enter a vaild price
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Country</label>
                                 <input type="text" name="Listing[country]" class="form-control"
-                                    placeholder="enter country">
+                                    placeholder="enter country" required>
+                                <div class="valid-feedback">Country looks good!</div>
+                                <div class="invalid-feedback">
+                                    Please enter a vaild country
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="title" class="form-label">Location</label>
-                        <input type="text" name="Listing[location]" class="form-control" placeholder="enter location">
+                        <input type="text" name="Listing[location]" class="form-control" placeholder="enter location"
+                            required>
+                        <div class="valid-feedback">Location looks good!</div>
+                        <div class="invalid-feedback">
+                            Please enter a vaild location
+                        </div>
                     </div>
                     <div class="text-center">
                         <button class="btn btn-danger px-4 ">Add</button>
