@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -55,11 +59,6 @@ main()
 async function main() {
   await mongoose.connect(mongo_url);
 }
-
-//Root Route
-app.get("/", (req, res) => {
-  res.send("working");
-});
 
 app.use((req, res, next) => {
   res.locals.message = req.flash("success");
